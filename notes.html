@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; object-src 'none'">
+<title>Learning log | Turki Zeheri</title>
+<meta name="description" content="A private learning log: add, edit, search and delete notes about data analysis, programming and games.">
+<meta property="og:title" content="Learning log | Turki Zeheri">
+<meta property="og:description" content="A private learning log: add, edit, search and delete notes about data analysis, programming and games.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Turki Zeheri</a>
+    <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="notes.html" aria-current="page">Learning log</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn small" href="Turki-Zeheri-CV.pdf" download>Download CV</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<h1>Learning log</h1>
+<p class="muted">Write what you learn. Notes are saved in your own browser, so only you can see them on this device.</p>
+
+<section class="panel" aria-labelledby="form-title">
+  <h2 id="form-title">Add a note</h2>
+  <form id="note-form" class="form" novalidate>
+    <label>Title <input id="note-title" maxlength="80" required></label>
+    <label>Topic
+      <select id="note-topic">
+        <option>Data analysis</option><option>Programming</option><option>Games</option><option>Other</option>
+      </select>
+    </label>
+    <label>Note <textarea id="note-text" rows="4" maxlength="1000" required></textarea></label>
+    <div id="form-msg" class="flash" role="status" hidden></div>
+    <div class="btn-row">
+      <button class="btn" id="note-submit" type="submit">Add note</button>
+      <button class="btn ghost" id="note-cancel" type="button" hidden>Cancel editing</button>
+    </div>
+  </form>
+</section>
+
+<section aria-labelledby="list-title">
+  <div class="page-head">
+    <h2 id="list-title">My notes <span id="note-count" class="muted"></span></h2>
+    <button class="btn ghost small" id="note-download" type="button">Download notes (JSON)</button>
+  </div>
+  <div class="search" role="search">
+    <label class="sr" for="note-search">Search notes</label>
+    <input id="note-search" type="search" placeholder="Search notes">
+    <label class="sr" for="note-filter">Filter by topic</label>
+    <select id="note-filter">
+      <option value="">All topics</option><option>Data analysis</option><option>Programming</option><option>Games</option><option>Other</option>
+    </select>
+  </div>
+  <div id="note-list" class="cards"></div>
+  <div id="note-empty" class="empty" hidden></div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>&copy; 2026 Turki Zeheri</span>
+    <a href="mailto:Tzeheri26@gmail.com">Tzeheri26@gmail.com</a>
+  </div>
+</footer>
+<script src="notes.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'self'; object-src 'none'">
+<title>Contact | Turki Zeheri</title>
+<meta name="description" content="Contact Turki Zeheri by email.">
+<meta property="og:title" content="Contact | Turki Zeheri">
+<meta property="og:description" content="Contact Turki Zeheri by email.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html">Turki Zeheri</a>
+    <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="notes.html">Learning log</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="btn small" href="Turki-Zeheri-CV.pdf" download>Download CV</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+<section class="narrow">
+  <h1>Contact me</h1>
+  <p>Fill in the form and your email app opens with the message ready to send to <a href="mailto:Tzeheri26@gmail.com">Tzeheri26@gmail.com</a>.</p>
+  <form id="contact-form" class="form" novalidate>
+    <label>Your name <input id="c-name" maxlength="80" required autocomplete="name"></label>
+    <label>Your email <input id="c-email" type="email" maxlength="120" required autocomplete="email"></label>
+    <label>Message <textarea id="c-message" rows="6" maxlength="1000" required></textarea></label>
+    <ul id="c-errors" class="errors" role="alert" hidden></ul>
+    <button class="btn" type="submit">Open email</button>
+  </form>
+  <p id="c-done" class="flash success" role="status" hidden>Your email app should open now. If nothing happens, write to Tzeheri26@gmail.com directly.</p>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap foot">
+    <span>&copy; 2026 Turki Zeheri</span>
+    <a href="mailto:Tzeheri26@gmail.com">Tzeheri26@gmail.com</a>
+  </div>
+</footer>
+<script src="contact.js"></script>
+</body>
+</html>
